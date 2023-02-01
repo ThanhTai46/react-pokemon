@@ -3,11 +3,11 @@ import { Detail } from "../interface";
 import "./pokemon.css";
 interface Props {
   abilities:
-    | {
-        name: string;
-        ability: string;
-      }[]
-    | undefined;
+  | {
+    name: string;
+    ability: string;
+  }[]
+  | undefined;
   name: string;
   id: number;
   images: string;
@@ -19,7 +19,7 @@ const PokemonList: React.FC<Props> = (props) => {
   const [isSelected, setIsSelected] = useState(false);
   useEffect(() => {
     setIsSelected(id === detail?.id);
-  }, [detail, id]);
+  }, [detail, id])
 
   const handleClose = () => {
     setDetail({
